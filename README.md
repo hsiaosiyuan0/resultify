@@ -1,4 +1,4 @@
-# to-result
+# @hsiaosiyuan0/resultify
 
 Function in JavaScript could return values, in the meantime it would also throw errors if it cannot produce the caller expected value for some reasons whose details would be carried by those errors, if the errors occur then the caller should use a `try-catch` statement to capture the potential errors otherwise the program will be interrupted by the runtime to prevent it from running into the unpredictable state.
 
@@ -7,11 +7,11 @@ However `try-catch` is slightly inflexible since it will force the program to us
 ## Usage
 
 ```$
-npm i to-result
+npm i @hsiaosiyuan0/resultify
 ```
 
 ```ts
-import { resultify } from "to-result";
+import { resultify } from "@hsiaosiyuan0/resultify";
 
 async function fn() {
   // do some async work
@@ -28,7 +28,7 @@ console.log(resp.r);
 for the synchronous task we should convert to be its lazy-compute form:
 
 ```ts
-import { resultify } from "to-result";
+import { resultify } from "@hsiaosiyuan0/resultify";
 
 function fn() {
   // do some sync work

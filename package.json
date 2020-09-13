@@ -1,9 +1,12 @@
 {
-  "name": "to-result",
+  "name": "@hsiaosiyuan0/resultify",
   "version": "0.0.1",
   "description": "Encapsulating the return value and the error coming with it",
   "main": "src/index.ts",
   "repository": "https://github.com/hsiaosiyuan0/to-result.git",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "author": "hsiaosiyuan0@outlook.com",
   "license": "MIT",
   "scripts": {
