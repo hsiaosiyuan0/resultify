@@ -25,7 +25,7 @@ if (resp.e) return;
 console.log(resp.r);
 ```
 
-for some situation you want rethrow the error:
+for some situations you want rethrow the error:
 
 ```ts
 const resp = await resultify(fn());
@@ -39,7 +39,7 @@ const resp = await resultify(fn());
 console.log(resp.take());
 ```
 
-since `take` will unboxing the result then either return the value held by the field `r` or rethrow the error held by the field `e` if it's not `null`, you could also use `try-catch` as normal:
+since `take` will unboxing the result then either return the value held by the field `r` or rethrow the error held by the field `e` if it's not `null`, you could also use `try-catch` to recover the program state as normal:
 
 ```ts
 const resp = await resultify(fn());
