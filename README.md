@@ -1,4 +1,4 @@
-# @hsiaosiyuan0/resultify
+# Resultify
 
 Function in JavaScript could return values, in the meantime it would also throw errors if it cannot produce the caller expected value for some reasons whose details would be carried by those errors, if the errors occur then the caller should use a `try-catch` statement to capture the potential errors otherwise the program will be interrupted by the runtime to prevent it from running into the unpredictable state.
 
