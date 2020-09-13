@@ -25,7 +25,7 @@ if (resp.e) return;
 console.log(resp.r);
 ```
 
-for the synchronous task we should convert to be a lazy-compute form:
+for the synchronous task we should convert to be its lazy-compute form:
 
 ```ts
 import { resultify } from "to-result";
