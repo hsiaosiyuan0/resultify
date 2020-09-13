@@ -25,21 +25,34 @@ if (resp.e) return;
 console.log(resp.r);
 ```
 
-for some situations you want rethrow the error:
+for the synchronous task we should convert to be a lazy-compute form:
+
+```ts
+import { resultify } from "to-result";
+
+function fn() {
+  // do some sync work
+}
+
+const resp = await resultify(() => fn());
+if (resp.e) return;
+```
+
+for some situations we want rethrow the error:
 
 ```ts
 const resp = await resultify(fn());
 if (resp.e) throw resp.e;
 ```
 
-or you could use the `take` method to shorten above code:
+or we could use the `take` method to shorten above code:
 
 ```ts
 const resp = await resultify(fn());
 console.log(resp.take());
 ```
 
-since `take` will unboxing the result then either return the value held by the field `r` or rethrow the error held by the field `e` if it's not `null`, you could also use `try-catch` to recover the program state as normal:
+since `take` will unboxing the result then either return the value held by the field `r` or rethrow the error held by the field `e` if it's not `null`, we could also use `try-catch` to recover the program state as normal:
 
 ```ts
 const resp = await resultify(fn());
