@@ -2,7 +2,7 @@
 
 Function in JavaScript could return values, in the meantime it would also throw errors if it cannot produce the caller expected value for some reasons whose details would be carried by those errors, if the errors occur then the caller should use a `try-catch` statement to capture the potential errors otherwise the program will be interrupted by the runtime to prevent it from running into the unpredictable state.
 
-However `try-catch` is a little bit inflexible since it will force the program to use an explicit control-flow branch in its `catch` clause. For letting the errors handling to be more flexible, this module could encapsulate the return value together with the coming error to become a boxing value called `Result`
+However `try-catch` is slightly inflexible since it will force the program to use an explicit control-flow branch in its `catch` clause. For letting the errors handling to be more flexible, this module could encapsulate the return value together with the coming error to become a boxing value called `Result`
 
 ## Usage
 
